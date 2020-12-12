@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_header"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.rafaelescudero.jetpack.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/fromMainToBrowser"
+            app:destination="@id/browserFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/fromMainToCam"
+            app:destination="@id/camaraFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/fromMainToCalc"
+            app:destination="@id/calculadoraFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/browserFragment"
+        android:name="com.rafaelescudero.jetpack.BrowserFragment"
+        android:label="fragment_browser"
+        tools:layout="@layout/fragment_browser" />
+    <fragment
+        android:id="@+id/camaraFragment"
+        android:name="com.rafaelescudero.jetpack.CamaraFragment"
+        android:label="fragment_camara"
+        tools:layout="@layout/fragment_camara" />
+    <fragment
+        android:id="@+id/calculadoraFragment"
+        android:name="com.rafaelescudero.jetpack.CalculadoraFragment"
+        android:label="fragment_calculadora"
+        tools:layout="@layout/fragment_calculadora" >
+        <action
+            android:id="@+id/fromCalcToSum"
+            app:destination="@id/sumarFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/fromCalcToRest"
+            app:destination="@id/restarFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/fromCalcToDiv"
+            app:destination="@id/dividirFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumarFragment"
+        android:name="com.rafaelescudero.jetpack.SumarFragment"
+        android:label="fragment_sumar"
+        tools:layout="@layout/fragment_sumar" />
+    <fragment
+        android:id="@+id/restarFragment"
+        android:name="com.rafaelescudero.jetpack.RestarFragment"
+        android:label="fragment_restar"
+        tools:layout="@layout/fragment_restar" />
+    <fragment
+        android:id="@+id/dividirFragment"
+        android:name="com.rafaelescudero.jetpack.DividirFragment"
+        android:label="fragment_dividir"
+        tools:layout="@layout/fragment_dividir" />
+</navigation>
